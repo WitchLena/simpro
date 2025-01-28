@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Simutek Pro offers IT consulting, cloud solutions, and cybersecurity services to businesses of all sizes.">
+    <title>Simutek Pro</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" sizes="any" href="favicon.svg">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Simutek Pro</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="container">
+            <h2>Your Trusted Tech Partner</h2>
+            <p>Helping businesses innovate and grow through technology.</p>
+            <a href="#contact" class="cta-btn">Contact Us</a>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>At Simutek Pro, we specialize in providing cutting-edge solutions that drive success for businesses. Our team of experts is dedicated to understanding your needs and delivering the right technology solutions to meet your goals.</p>
+        </div>
+    </section>
+
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-cards">
+                <div class="service-card">
+                    <h3>Cloud Solutions</h3>
+                    <p>Optimize your business operations with scalable cloud infrastructure and services.</p>
+                </div>
+                <div class="service-card">
+                    <h3>IT Consulting</h3>
+                    <p>Get expert guidance on the best IT strategies for your company.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Cybersecurity</h3>
+                    <p>Protect your data and business from digital threats with our comprehensive cybersecurity services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <input type="text" id="name" placeholder="Your Name" required>
+                <input type="email" id="email" placeholder="Your Email" required>
+                <textarea id="message" placeholder="Your Message" required></textarea>
+                
+                <!-- Add the reCAPTCHA widget here -->
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                
+                <button type="submit">Send Message</button>
+            </form>
+            <div id="form-response"></div>
+        </div>
+    </section>
+    
+    <!-- Include the reCAPTCHA API script -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Simutek | All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
