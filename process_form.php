@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Your reCAPTCHA secret key
     $secret = '6LfQKcgqAAAAABdfUa30TsoXgdNhb8CnqBLfc7oa';
-    $response = $_POST['g-recaptcha-response']; // reCAPTCHA response from the form
+    $response = $_POST['recaptcha_response']; // reCAPTCHA response from the form
     $remoteip = $_SERVER['REMOTE_ADDR']; // User's IP address
 
     // Send request to Google's reCAPTCHA API for verification
@@ -28,10 +28,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $resultJson = json_decode($result);
     if ($resultJson->success) {
         // reCAPTCHA was verified successfully
-        // Proceed with form submission (e.g., send email, save to database)
+        // Process the form submission (e.g., send email, save to database)
+        
+        // Respond back with JSON success
+        echo json_encode(["success" => true]);
     } else {
         // reCAPTCHA verification failed
-        echo "reCAPTCHA verification failed. Please try again.";
+        echo json_encode(["success" => false, "error" => "reCAPTCHA verification failed."]);
     }
 }
 ?>

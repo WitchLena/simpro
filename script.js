@@ -24,25 +24,21 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
         .then(response => response.json())  // Parse JSON response from server
         .then(data => {
             if (data.success) {
-                document.getElementById("form-response").innerHTML = `
-                    <p>Thank you, ${name}! We have received your message and will get back to you shortly.</p>
-                `;
+                document.getElementById("form-response").innerHTML = 
+                    `<p>Thank you, ${name}! We have received your message and will get back to you shortly.</p>`;
                 document.getElementById("contact-form").reset();
             } else {
-                document.getElementById("form-response").innerHTML = `
-                    <p style="color: red;">There was an error submitting your form. Please try again.</p>
-                `;
+                document.getElementById("form-response").innerHTML = 
+                    `<p style="color: red;">There was an error submitting your form. Please try again.</p>`;
             }
         })
         .catch(error => {
-            document.getElementById("form-response").innerHTML = `
-                <p style="color: red;">Error: ${error}</p>
-            `;
+            document.getElementById("form-response").innerHTML = 
+                `<p style="color: red;">Error: ${error}</p>`;
         });
     } else {
         // If reCAPTCHA or form fields are empty, show error
-        document.getElementById("form-response").innerHTML = `
-            <p style="color: red;">Please fill in all fields and complete the reCAPTCHA.</p>
-        `;
+        document.getElementById("form-response").innerHTML = 
+            `<p style="color: red;">Please fill in all fields and complete the reCAPTCHA.</p>`;
     }
 });
