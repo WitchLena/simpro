@@ -1,7 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Your reCAPTCHA secret key
-    $secret = '6LfQKcgqAAAAABdfUa30TsoXgdNhb8CnqBLfc7oa';
+    $secret = '6Ld_QMgqAAAAADcuNbJq-Et1rzp9Q4Kd9ZRIJTOm';
     $response = $_POST['recaptcha_response']; // reCAPTCHA response from the form
     $remoteip = $_SERVER['REMOTE_ADDR']; // User's IP address
 
